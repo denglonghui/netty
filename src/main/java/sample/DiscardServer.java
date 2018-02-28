@@ -55,7 +55,7 @@ public class DiscardServer {
 	            port = Integer.parseInt(args[0]);
 	        } else {
 	            port = 8080;
-	        }
+	        } 
 	        log.info(port+" listen....");
 	        System.out.println(port+" listen....");
 	        new DiscardServer(port).run();
