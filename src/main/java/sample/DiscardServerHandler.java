@@ -1,5 +1,7 @@
 package sample;
 
+import java.net.InetSocketAddress;
+
 import org.apache.log4j.Logger;
 
 import io.netty.buffer.ByteBuf;
@@ -12,6 +14,10 @@ public class DiscardServerHandler extends ChannelInboundHandlerAdapter {
 	private Logger log=Logger.getLogger(DiscardServerHandler.class);
 	 @Override
 	    public void channelRead(ChannelHandlerContext ctx, Object msg) { // (2)
+		 InetSocketAddress insocket = (InetSocketAddress) ctx.channel().remoteAddress();
+         String clientIP = insocket.getAddress().getHostAddress();
+         log.info("client IP:"+clientIP);
+         System.out.println("client IP:"+clientIP);
 		 ByteBuf in = (ByteBuf) msg;
 		    try {
 		    	String s=in.toString(io.netty.util.CharsetUtil.US_ASCII);
