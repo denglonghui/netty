@@ -18,7 +18,7 @@ public class DiscardServerHandler extends ChannelInboundHandlerAdapter {
          String clientIP = insocket.getAddress().getHostAddress();
          log.info("client IP:"+clientIP);
          System.out.println("client IP:"+clientIP); 
-		 ByteBuf in = (ByteBuf) msg;
+		 ByteBuf in = (ByteBuf) msg; 
 		    try {
 		    	String s=in.toString(io.netty.util.CharsetUtil.US_ASCII);
 		    	 log.info(s);
