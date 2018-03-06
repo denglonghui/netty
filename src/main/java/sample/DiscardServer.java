@@ -17,7 +17,7 @@ public class DiscardServer {
 	 private static Logger log=Logger.getLogger(DiscardServer.class);
 	    public DiscardServer(int port) {
 	        this.port = port;
-	    }
+	    } 
 	    
 	    public void run() throws Exception {
 	        EventLoopGroup bossGroup = new NioEventLoopGroup(); // (1)

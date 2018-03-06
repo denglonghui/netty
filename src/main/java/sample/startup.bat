@@ -1,2 +1,2 @@
-java -jar rec.jar 9000 
+java -jar rec.jar 9000  
 pause; 
